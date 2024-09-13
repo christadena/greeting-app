@@ -39,11 +39,15 @@ function App() {
     greeting = "Good evening";
   }
 
+  const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const currentDay = daysOfWeek[time.getDay()];
+  const whatDay = " Today is " + currentDay;
   return (
     <div className="App">
       <h1 className="heading" style={{ color: colors[colorIndex] }}>
         {greeting}
       </h1>
+      <p>{whatDay}</p>
       <p className="time">
         Current Time: {currentHour.toString().padStart(2, "0")}:
         {currentMinutes.toString().padStart(2, "0")}:
